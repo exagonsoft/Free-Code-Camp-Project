@@ -12,8 +12,8 @@
 
 <body>
    <div class="container">
-      <h1>Manage Node.js projects and npm packages using package.json</h1>
-      <h3>Part 1 of Free Code Camp Backend Challenges</h3>
+      <h1>FreeCodeCamp NPM Structure</h1>
+      <h3 id="projectDescription"></h3>
       <hr />
       <div style="display: flex;">
          <h3 style="display: flex; margin-left: 5px;">Author : </h3><span id="authName" style="align-self: center; margin-left: 10px;"></span>
@@ -27,9 +27,11 @@
        .then(response => response.json())
        .then(data => {
            // Assign the value of the "author" property to a variable
-           var authName = data.author.name;
+           let authName = data.author.name;
+           let description = data.description;
            // Update the innerHTML of the element with id "authName"
            document.getElementById("authName").innerHTML = authName;
+           document.getElementById("projectDescription").innerHTML = description;
        })
        .catch(error => console.error(error));
 </script>
