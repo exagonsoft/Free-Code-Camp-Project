@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html>
 
-   <head>
-      <title>Backend Challenges | Free Code Camp</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
+<head>
+   <title>Backend Challenges | Free Code Camp</title>
+   <link rel="shortcut icon"
+      href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico"
+      type="image/x-icon" />
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+   <link href="/public/style.css" rel="stylesheet" type="text/css">
+</head>
 
-   <body>
-      <div class="container">
-         <h1>Manage Node.js projects and npm packages using package.json</h1>
-         <h3>Part 1 of Free Code Camp Backend Challenges</h3>
+<body>
+   <div class="container">
+      <h1>Manage Node.js projects and npm packages using package.json</h1>
+      <h3>Part 1 of Free Code Camp Backend Challenges</h3>
+      <hr />
+      <div style="display: flex;">
+         <h3 style="display: flex; margin-left: 5px;">Author : </h3><span id="authName" style="align-self: center; margin-left: 10px;"></span>
       </div>
-   </body>
+   </div>
+</body>
+
+<script>
+   // Use the Fetch API to read the package.json file
+   fetch('/_api/package.json')
+       .then(response => response.json())
+       .then(data => {
+           // Assign the value of the "author" property to a variable
+           var authName = data.author.name;
+           // Update the innerHTML of the element with id "authName"
+           document.getElementById("authName").innerHTML = authName;
+       })
+       .catch(error => console.error(error));
+</script>
 
 </html>
