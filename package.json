@@ -2,6 +2,7 @@
 	"name": "fcc-learn-npm-package-json",
 	"description": "Simple Node. JS App for the FreeCodeCamp BackEnd and API Course",
 	"keywords": [ "freecodecamp", " learning", " fun" ],
+	"license": "MIT",
 	"author": {
 		"name": "Alvaro R. Martin Peraza",
 		"email": "exagonsoft@gmail.com",
