@@ -29,8 +29,8 @@
        .then(data => {
            // Update the innerHTML of the elements
            document.getElementById("authName").innerHTML = data.author.name;
-           document.getElementById("projectDescription").innerHTML = description;
-           document.getElementById("projectKeyWords").innerHTML = keywords;
+           document.getElementById("projectDescription").innerHTML = data.description;
+           document.getElementById("projectKeyWords").innerHTML = data.keywords;
        })
        .catch(error => console.error(error));
 </script>
