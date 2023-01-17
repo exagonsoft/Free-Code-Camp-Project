@@ -1,2 +1,13 @@
 # Backend Challenges boilerplate - package.json
-[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-npm)](https://repl.it/github/freeCodeCamp/boilerplate-npm)
+
+**By ![ExagonSoft](https://github/exagonsoft)**
+
+## USAGE
+- ***Clone the repo***
+- ***Open in your prefered IDE***
+- ***Open a terminal and run 'npm install'***
+- ***From the same terminal run npm start***
+
+# Or Simply
+
+[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-npm)](https://repl.it/github/exagonsoft/Free-Code-Camp-Project)
