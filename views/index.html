@@ -14,13 +14,21 @@
    <div class="container">
       <h1>FreeCodeCamp NPM Structure</h1>
       <h3 id="projectDescription"></h3>
-      <h3 id="projectKeyWords"></h3>
+      <div class="Package-Tags-Wrapper"><h3 id="projectKeyWords1" class="Package-Tag"></h3><h3 id="projectKeyWords2" class="Package-Tag"></h3><h3 id="projectKeyWords3" class="Package-Tag"></h3></div>
       <hr />
-      <div style="display: flex;">
-         <h3 style="display: flex; margin-left: 5px;">Author: </h3><span id="authName" style="align-self: center; margin-left: 10px;"></span>
-      </div>
-      <div style="display: flex;">
-         <h3 style="display: flex; margin-left: 5px;">License: </h3><span id="license" style="align-self: center; margin-left: 10px;"></span>
+      <div class="Package-Info">
+         <div class="Package-Info-Row">
+            <h3 class="Package-Info-Label">Author: </h3><span id="authName"
+               class="Package-Info-Text"></span>
+         </div>
+         <div class="Package-Info-Row">
+            <h3 class="Package-Info-Label">License: </h3><span id="license"
+               class="Package-Info-Text"></span>
+         </div>
+         <div class="Package-Info-Row">
+            <h3 class="Package-Info-Label">Version: </h3><span id="version"
+               class="Package-Info-Text"></span>
+         </div>
       </div>
    </div>
 </body>
@@ -28,15 +36,18 @@
 <script>
    // Use the Fetch API to read the package.json file
    fetch('/_api/package.json')
-       .then(response => response.json())
-       .then(data => {
-           // Update the innerHTML of the elements
-           document.getElementById("authName").innerHTML = data.author.name;
-           document.getElementById("projectDescription").innerHTML = data.description;
-           document.getElementById("projectKeyWords").innerHTML = data.keywords;
-           document.getElementById("license").innerHTML = data.license;
-       })
-       .catch(error => console.error(error));
+      .then(response => response.json())
+      .then(data => {
+         // Update the innerHTML of the elements
+         document.getElementById("authName").innerHTML = data.author.name;
+         document.getElementById("projectDescription").innerHTML = data.description;
+         document.getElementById("projectKeyWords1").innerHTML = data.keywords[0];
+         document.getElementById("projectKeyWords2").innerHTML = data.keywords[1];
+         document.getElementById("projectKeyWords3").innerHTML = data.keywords[2];
+         document.getElementById("license").innerHTML = data.license;
+         document.getElementById("version").innerHTML = data.version;
+      })
+      .catch(error => console.error(error));
 </script>
 
 </html>

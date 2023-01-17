@@ -1,35 +1,82 @@
 /****** Main Styling ******/
 
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #ECF0F1;
-	text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #222;
+  background-color: #ecf0f1;
+  text-align: center;
 }
 
 .container {
-	padding: 0;
-	margin-top: 40px;
+  padding: 0;
+  margin-top: 40px;
 }
 
 .footer {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 
 ol {
-	list-style-position: inside;
+  list-style-position: inside;
 }
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-	color: #2574A9;
+  color: #2574a9;
 }
 /****** Logo Div Styling ******/
 
 img {
-	margin: 20px auto 0 auto;
-	display: block;
+  margin: 20px auto 0 auto;
+  display: block;
+}
+
+.Package-Info {
+  width: fit-content;
+  background: #08e73b9c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  box-shadow: 3px 6px 10px grey;
+}
+
+.Package-Info-Row {
+  display: flex;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.Package-Info-Label {
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+}
+
+.Package-Info-Text {
+  align-self: center;
+  margin-left: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.Package-Tags-Wrapper {
+  display: flex;
+  margin: 0 30% 0 30%;
+  width: 40%;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.Package-Tag {
+  background: rgb(8 8 96);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 6px 10px grey;
+  color: white;
 }
