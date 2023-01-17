@@ -14,6 +14,7 @@
    <div class="container">
       <h1>FreeCodeCamp NPM Structure</h1>
       <h3 id="projectDescription"></h3>
+      <h3 id="projectKeyWords"></h3>
       <hr />
       <div style="display: flex;">
          <h3 style="display: flex; margin-left: 5px;">Author : </h3><span id="authName" style="align-self: center; margin-left: 10px;"></span>
@@ -26,12 +27,10 @@
    fetch('/_api/package.json')
        .then(response => response.json())
        .then(data => {
-           // Assign the value of the "author" property to a variable
-           let authName = data.author.name;
-           let description = data.description;
-           // Update the innerHTML of the element with id "authName"
-           document.getElementById("authName").innerHTML = authName;
+           // Update the innerHTML of the elements
+           document.getElementById("authName").innerHTML = data.author.name;
            document.getElementById("projectDescription").innerHTML = description;
+           document.getElementById("projectKeyWords").innerHTML = keywords;
        })
        .catch(error => console.error(error));
 </script>
