@@ -34,6 +34,11 @@ img {
   display: block;
 }
 
+.Package-Info-Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .Package-Info {
   width: fit-content;
   background: #08e73b9c;
@@ -41,6 +46,13 @@ img {
   border-radius: 10px;
   margin-left: 10px;
   box-shadow: 3px 6px 10px grey;
+}
+
+.Package-Info-Title {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: larger;
+  font-weight: bolder;
 }
 
 .Package-Info-Row {

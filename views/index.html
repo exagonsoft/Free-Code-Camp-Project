@@ -16,20 +16,31 @@
       <h3 id="projectDescription"></h3>
       <div class="Package-Tags-Wrapper"><h3 id="projectKeyWords1" class="Package-Tag"></h3><h3 id="projectKeyWords2" class="Package-Tag"></h3><h3 id="projectKeyWords3" class="Package-Tag"></h3></div>
       <hr />
-      <div class="Package-Info">
-         <div class="Package-Info-Row">
-            <h3 class="Package-Info-Label">Author: </h3><span id="authName"
-               class="Package-Info-Text"></span>
+      <div class="Package-Info-Wrapper ">
+         <div class="Package-Info">
+            <div class="Package-Info-Title">General Info</div>
+            <div class="Package-Info-Row">
+               <h3 class="Package-Info-Label">Author: </h3><span id="authName"
+                  class="Package-Info-Text"></span>
+            </div>
+            <div class="Package-Info-Row">
+               <h3 class="Package-Info-Label">License: </h3><span id="license"
+                  class="Package-Info-Text"></span>
+            </div>
+            <div class="Package-Info-Row">
+               <h3 class="Package-Info-Label">Version: </h3><span id="version"
+                  class="Package-Info-Text"></span>
+            </div>
          </div>
-         <div class="Package-Info-Row">
-            <h3 class="Package-Info-Label">License: </h3><span id="license"
-               class="Package-Info-Text"></span>
-         </div>
-         <div class="Package-Info-Row">
-            <h3 class="Package-Info-Label">Version: </h3><span id="version"
-               class="Package-Info-Text"></span>
+         <div class="Package-Info">
+            <div class="Package-Info-Title">Dependencies</div>
+            <div class="Package-Info-Row">
+               <h3 class="Package-Info-Label">@freecodecamp/example: </h3><span id="freeCodeCamp"
+                  class="Package-Info-Text"></span>
+            </div>
          </div>
       </div>
+      
    </div>
 </body>
 
@@ -46,6 +57,7 @@
          document.getElementById("projectKeyWords3").innerHTML = data.keywords[2];
          document.getElementById("license").innerHTML = data.license;
          document.getElementById("version").innerHTML = data.version;
+         document.getElementById("freeCodeCamp").innerHTML = Object.values(data.dependencies)[0];
       })
       .catch(error => console.error(error));
 </script>
