@@ -1,6 +1,6 @@
 # Backend Challenges boilerplate - package.json
 
-**By ![ExagonSoft](https://github/exagonsoft)**
+**By ![ExagonSoft](https://github.com/exagonsoft)**
 
 ## USAGE
 - ***Clone the repo***
